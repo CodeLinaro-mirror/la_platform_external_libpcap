@@ -1397,7 +1397,8 @@ set_poll_timeout(struct pcap_linux *handlep)
 		 * Don't do that if we have a broken TPACKET_V3, though.
 		 */
 		if (handlep->tp_version == TPACKET_V3 && !broken_tpacket_v3)
-			handlep->poll_timeout = -1;	/* block forever, let TPACKET_V3 wake us up */
+			//handlep->poll_timeout = -1;	/* block forever, let TPACKET_V3 wake us up */
+			handlep->poll_timeout = handlep->timeout;	/* block for that amount of time */
 		else
 #endif
 			handlep->poll_timeout = handlep->timeout;	/* block for that amount of time */
