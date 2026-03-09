@@ -18,6 +18,7 @@ third_party {
   identifier {
     type: "Git"
     value: "https://github.com/the-tcpdump-group/libpcap.git"
-    version: "libpcap-1.10.6"
+    version: "a999701dca5c873779281938baee6bc185a8d4dc"
+    closest_version: "libpcap-1.10.6"
   }
 }
